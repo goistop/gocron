@@ -12,7 +12,7 @@ RUN make install-vue \
     && make statik \
     && CGO_ENABLED=0 make gocron
 
-FROM alpine:3.7
+FROM alpine:3.10
 
 RUN apk add --no-cache ca-certificates tzdata \
     && addgroup -S app \
